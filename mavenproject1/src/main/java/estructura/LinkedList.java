@@ -137,3 +137,4 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+//vale es fea
