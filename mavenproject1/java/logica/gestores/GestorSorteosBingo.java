@@ -6,6 +6,7 @@
 package logica.gestores;
 
 import estructura.LinkedList;
+import java.util.Date;
 import logica.sorteos.Bingo;
 import logica.sorteos.Sorteos;
 
@@ -13,7 +14,7 @@ import logica.sorteos.Sorteos;
  *
  * @author valem
  */
-public class GestorSorteosBingo {
+public class GestorSorteosBingo implements GestorSorteos{
     private LinkedList<Sorteos> listaSorteosBingo;
 
     public LinkedList<Sorteos> getListaSorteosBingo() {
@@ -28,18 +29,24 @@ public class GestorSorteosBingo {
         this.listaSorteosBingo = listaSorteosLoteria;
     }
 
-    public void crear(Bingo BingoP) {
-        listaSorteosBingo.create(BingoP);
+    @Override
+    public void crear(Sorteos Sorteo) {
+        listaSorteosBingo.create(Sorteo);
         System.out.println("Se ha creado el Sorteo Correctamente");
     }
 
-    public void eliminar(Bingo BingoP) {
-        listaSorteosBingo.Delete(BingoP);
-        System.out.println("Se ha eliminado el Sorteo Correctamente");
+    @Override
+    public void eliminar(Sorteos Sorteo) {
+        listaSorteosBingo.Delete(Sorteo);
+        System.out.println("Se ha eliminado el Sorteo Correctamente");    }
+
+    @Override
+    public String consultar(Sorteos Sorteo) {
+        return listaSorteosBingo.consult(Sorteo).toString();
     }
 
-    public String consultar(Bingo BingoP) {
-        return listaSorteosBingo.consult(BingoP).toString();
-        
+    @Override
+    public String Buscar(String nombre, String tipo, Date Fecha_Sorteo, int Precio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
