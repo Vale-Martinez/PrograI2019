@@ -20,8 +20,12 @@ public class GestorSorteosLotto implements GestorSorteos{
         this.listaSorteosLotto = listaSorteosLotto;
     }
 
-    public GestorSorteosLotto(LinkedList<Sorteos> listaSorteosLoteria) {
-        this.listaSorteosLotto = listaSorteosLoteria;
+    public GestorSorteosLotto(LinkedList<Sorteos> listaSorteosLotto) {
+        this.listaSorteosLotto = listaSorteosLotto;
+    }
+
+    public GestorSorteosLotto() {
+        this.listaSorteosLotto = new LinkedList<>();
     }
 
     @Override
