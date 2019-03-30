@@ -10,6 +10,7 @@ public class Loteria extends Sorteos {
     //se crea una variable de tipo random para el numero ganador
 
     private int Num_Ganador = random.nextInt(100);
+    public final int precio = 1000;
 
     //getters and setters
     public int getNum_Ganador() {
