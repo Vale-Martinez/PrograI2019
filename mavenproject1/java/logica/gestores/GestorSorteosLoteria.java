@@ -23,6 +23,9 @@ public class GestorSorteosLoteria implements GestorSorteos {
     public GestorSorteosLoteria(LinkedList<Sorteos> listaSorteosLoteria) {
         this.listaSorteosLoteria = listaSorteosLoteria;
     }
+    public GestorSorteosLoteria() {
+        this.listaSorteosLoteria = new LinkedList<>();
+    }
 
     @Override
     public void crear(Sorteos Sorteo) {
