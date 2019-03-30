@@ -19,9 +19,12 @@ public class GestorSorteosTiempos implements GestorSorteos{
     public void setListaSorteosTiempos(LinkedList<Sorteos> listaSorteosTiempos) {
         this.listaSorteosTiempos = listaSorteosTiempos;
     }
+  public GestorSorteosTiempos(LinkedList<Sorteos> listaSorteosTiempos) {
+        this.listaSorteosTiempos = listaSorteosTiempos;
+    }
 
-    public GestorSorteosTiempos(LinkedList<Sorteos> listaSorteosLoteria) {
-        this.listaSorteosTiempos = listaSorteosLoteria;
+    public GestorSorteosTiempos() {
+        this.listaSorteosTiempos = new LinkedList<>();
     }
 
     @Override
