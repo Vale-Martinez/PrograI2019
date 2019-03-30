@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logica.gestores;
 
 import estructura.LinkedList;
+import java.util.Date;
 import logica.sorteos.Lotto;
 import logica.sorteos.Sorteos;
 
@@ -13,7 +9,7 @@ import logica.sorteos.Sorteos;
  *
  * @author valem
  */
-public class GestorSorteosLotto {
+public class GestorSorteosLotto implements GestorSorteos{
     private LinkedList<Sorteos> listaSorteosLotto;
 
     public LinkedList<Sorteos> getListaSorteosLotto() {
@@ -28,18 +24,24 @@ public class GestorSorteosLotto {
         this.listaSorteosLotto = listaSorteosLoteria;
     }
 
-    public void crear(Lotto LottoP) {
-        listaSorteosLotto.create(LottoP);
+    @Override
+    public void crear(Sorteos Sorteo) {
+        listaSorteosLotto.create(Sorteo);
         System.out.println("Se ha creado el Sorteo Correctamente");
     }
 
-    public void eliminar(Lotto LottoP) {
-        listaSorteosLotto.Delete(LottoP);
-        System.out.println("Se ha eliminado el Sorteo Correctamente");
+    @Override
+    public void eliminar(Sorteos Sorteo) {
+        listaSorteosLotto.Delete(Sorteo);
+        System.out.println("Se ha eliminado el Sorteo Correctamente");    }
+
+    @Override
+    public String consultar(Sorteos Sorteo) {
+        return listaSorteosLotto.consult(Sorteo).toString();
     }
 
-    public String consultar(Lotto LottoP) {
-        return listaSorteosLotto.consult(LottoP).toString();
-        
+    @Override
+    public String Buscar(String nombre, String tipo, Date Fecha_Sorteo, int Precio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
