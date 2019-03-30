@@ -25,10 +25,14 @@ public class GestorSorteosBingo implements GestorSorteos{
         this.listaSorteosBingo = listaSorteosBingo;
     }
 
-    public GestorSorteosBingo(LinkedList<Sorteos> listaSorteosLoteria) {
-        this.listaSorteosBingo = listaSorteosLoteria;
+    public GestorSorteosBingo(LinkedList<Sorteos> listaSorteosBingo) {
+        this.listaSorteosBingo = listaSorteosBingo;
     }
 
+    public GestorSorteosBingo() {
+        this.listaSorteosBingo = new LinkedList<>();
+    }
+    
     @Override
     public void crear(Sorteos Sorteo) {
         listaSorteosBingo.create(Sorteo);
