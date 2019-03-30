@@ -23,6 +23,7 @@ public class Bingo extends Sorteos {
     private int Num_Ganador7 = random.nextInt(100);
     private int Num_Ganador8 = random.nextInt(100);
     private int Num_Ganador9 = random.nextInt(100);
+   public final int precio = 700;    
 
     //getters and setters de cada atributo
     public int getNum_Ganador1() {
