@@ -17,6 +17,7 @@ public class Tiempos extends Sorteos {
     
     private int NumGanador_Principal = random.nextInt(100);
     private int NumGanador_Jugada = random.nextInt(100);
+       public final int precio = 200;
 
     //getters and setters de cada atributo
     
