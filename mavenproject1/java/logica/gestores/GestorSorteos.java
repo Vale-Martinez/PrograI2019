@@ -1,26 +1,17 @@
 package logica.gestores;
 
-import logica.sorteos.*;
-import estructura.LinkedList;
 import java.util.Date;
+import logica.sorteos.Sorteos;
 
 /**
  *
  * @author valem
  */
-public class GestorSorteos {
+public interface GestorSorteos {
+    public void crear(Sorteos Sorteo);
+    public void eliminar (Sorteos Sorteo);
+    public String consultar (Sorteos Sorteo);
+    public String Buscar(String nombre,String tipo, Date Fecha_Sorteo,int Precio);
+}
 
-    private LinkedList<Sorteos> listaSorteos;
-
-    public LinkedList<Sorteos> getListaSorteos() {
-        return listaSorteos;
-    }
-
-    public void setListaSorteos(LinkedList<Sorteos> listaSorteos) {
-        this.listaSorteos = listaSorteos;
-    }
-    
-
-    private void Inicio() {
-    }
 }
