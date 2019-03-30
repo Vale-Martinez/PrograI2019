@@ -22,6 +22,7 @@ public class Lotto extends Sorteos {
     private int Num_Ganador6 = random.nextInt(100);
     private int Num_Ganador7 = random.nextInt(100);
     private int Acumulado;
+    public final int precio = 500;
 
      //getters and setters de cada atributo
     public int getNum_Ganador1() {
