@@ -31,7 +31,7 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
     public void setSize(int size) {
         this.size = size;
     }
-
+    //metodo create que añade un elemento a la lista
     @Override
     public void create(X element) {
         if (isEmpty()) {
@@ -44,7 +44,7 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
             size++;
         }
     }
-
+    //este metodo elimina un elemento en cualquier parte de lista
     private void DeleteWherever(X element) {
         StructureNode<X> tempNode, tempPrevios, tempNext;
         tempNode = head;
@@ -61,7 +61,8 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
         }
         size--;
     }
-
+    
+    //elimina en cualquier parte del la lista
     public void Delete(X element) {
         if (!isEmpty()) {
             if (tail.getElement().equals(element)) {
@@ -90,22 +91,26 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
         }
     }
 
+    //limpia la lista
     @Override
     public void clear() {
         this.head = this.tail = null;
         this.size = 0;
     }
 
+    //verifica si la lista está vacía
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    //retona el largo de la lista
     @Override
     public int getSize() {
         return size;
     }
 
+    //consulta si el elemento esta en la lista
     public X consult(X elemento) {
         StructureNode<X> temp = head;
         for (int i = 0; i < size; i++) {
@@ -118,6 +123,7 @@ public class LinkedList<X extends Comparable<X>> implements StructureBehavior<X>
         return temp.getElement();
     }
 
+    
     @Override
     public String toString() {
         String message = "";
